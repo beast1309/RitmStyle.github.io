@@ -1,0 +1,164 @@
+@media (max-width: 1081px) {
+    .services__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about__list-item {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .about__list-item__img {
+        grid-row: 2;
+    }
+}
+
+@media (max-width: 981px) {
+    .header__burger {
+        display: flex;
+        z-index: 10;
+    }
+
+    .header__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .header__nav {
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateY(-200%);
+        background: rgba(#018ABE, .9);
+        z-index: 9;
+        transition: ease .5s;
+        gap: 80px;
+
+        &-link {
+            font-size: 20px;
+        }
+    }
+
+    .header__nav.--active {
+        transform: translateY(0);
+        transition: ease .5s;
+    }
+}
+
+@media (max-width: 861px) {
+    .location__inner {
+        flex-direction: column;
+    }
+
+    .location__map {
+        padding: 0 80px;
+    }
+
+    .location__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .review__list .slick-slide {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 741px) {
+    .services__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .services__list-link {
+        width: 260px;
+    }
+
+    .price__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price__list,
+    .price__info {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 541px) {
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .location__list-item {
+        padding: 20px 30px;
+        width: 240px;
+    }
+
+    .services,
+    .review,
+    .about,
+    .price,
+    .location {
+        margin-top: 45px;
+        padding-top: 45px;
+        border-top: 1px solid #fff;
+
+        &__inner {
+            gap: 50px;
+        }
+    }
+
+    .header__inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .header__btn {
+        grid-column: span 2;
+        width: 100%;
+    }
+}
+
+@media (max-width: 451px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .greetings__suptitle::before,
+    .greetings__suptitle::after,
+    .services__title::before,
+    .services__title::after,
+    .review__title::before,
+    .review__title::after,
+    .about__title::before,
+    .about__title::after,
+    .price__title::before,
+    .price__title::after {
+        display: none;
+    }
+
+    .review__list-item {
+        padding: 10px;
+    }
+
+    .location__map {
+        padding: 0 20px;
+    }
+
+    .location__map iframe {
+        height: 400px;
+    }
+}
